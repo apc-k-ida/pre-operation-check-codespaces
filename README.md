@@ -12,7 +12,7 @@
 
 ### 1. 本リポジトリを複製
 
-[ここをクリックしてリポジトリを複製](https://github.com/new?template_owner=apc-k-ida&template_name=pre-operation-check-codespaces&owner=%40me&name=codespaces-copilot-test&visibility=private)
+[ここをクリックしてリポジトリを複製](https://github.com/new?template_owner=apc-k-ida&template_name=pre-operation-check-codespaces&owner=%40me&name=pre-operation-check-codespaces-test&visibility=private)
 
 リポジトリ作成画面から下記を確認し、問題なければ最後に **「Create repository」** でリポジトリを複製します。
 
