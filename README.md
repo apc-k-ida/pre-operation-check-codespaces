@@ -7,7 +7,8 @@
 3. Codespaces 内の Visual Studio Code で GitHub Copilot が動作するか確認
 4. (Copilot CLIを利用する場合) CLI の動作確認
 5. issue の自動作成を確認
-6. Codespaces の削除
+6. (Issue・PR の演習を行う場合) GitHub MCP と GitHub CLI を確認
+7. Codespaces の削除
 
 ### 1. 本リポジトリを複製
 
@@ -55,7 +56,32 @@ Codespaces を起動すると、その環境内で Visual Studio Code が立ち�
 
 ![create-issue-auto](./assets/create-issue-auto.png)
 
-### 6. Codespaces の削除
+### 6. (Issue・PR の演習を行う場合) GitHub MCP と GitHub CLI を確認
+
+当日のハンズオンで GitHub Copilot を使って Issue・PR を作成する場合は、Copilot Chat の Agent モードで次のプロンプトを送信してください。
+
+```text
+GitHub MCP のツールが利用できるか確認してください。
+利用できる場合は、このリポジトリの Issue 一覧を取得し、
+使用した MCP ツールと取得結果を報告してください。
+作成や変更は行わず、利用できない場合は理由を説明してください。
+認証情報は表示しないでください。
+```
+
+Copilot にサインインしていても、GitHub MCP が接続済みとは限りません。ツールの実行履歴と取得結果で確認します。接続を設定する場合は [GitHub MCP の公式手順](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server)と組織の利用ルールに従ってください。
+
+MCP が使えない場合の代替手段である GitHub CLI（`gh`）は、このリポジトリの devcontainer でインストールされます。GitHub Copilot CLI（`copilot`）とは別のツールです。ターミナルで確認してください。
+
+```text
+gh --version
+gh auth status
+```
+
+未認証の場合のみ `gh auth login` でブラウザー認証します。既に認証できている場合は再認証不要です。トークンをチャットやリポジトリに保存しないでください。読み取りの成功だけでは書き込みや push の権限を保証しません。
+
+GitHub.com 上の Copilot code review を体験する場合は、研修案内に従って契約・管理者設定による利用可否も確認してください。MCP や CLI の利用可否とは別です。権限不足や組織ポリシーの禁止は CLI で回避せず、担当者に相談してください。
+
+### 7. Codespaces の削除
 
 Codespaces は時間単位の従量課金のため、不要となった場合は削除を推奨いたします。
 詳細は[公式ドキュメント](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces)をご確認ください。
